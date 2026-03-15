@@ -1,31 +1,31 @@
 <?php
 
-$emp=[
-    [1,"Mahedi Hasan","Web Developer",35000],
-    [2,"Abdullah","Backend Developer",50000],
-    [3,"Pollob Sagor","Full Stack Developer",40000],
-    [4,"Rashed Khan","Frontend Developer",60000],
-];
+$users=[
+        [1,"Mahedi","Engineer",50000],
+        [2,"Pollob","Developer",20000],
+        [3,"Harun","Ai Engineer",30000],
+        [4,"Abdullah","Designer",40000],
+        [5,"Rashed","Manager",60000]
+    ];
 
-for ($row=0;$row<4;$row++){
-    for($col=0;$col<4;$col++){
-        echo $emp [$row][$col] . " ";
-    }echo "<br>";
-}
-
-echo "<br>";
-
-echo "<table border='1px'; cellpadding='5px' cellspacing='0'>";
-echo "<tr>
-      <th>Emp Id</th>
-      <th>Emp Name</th>
-      <th>Emp Desig</th>
-      <th>Emp Salary</th>
-     </tr>";
-foreach($emp as $v1){
+    echo "<table border='1px' cellpadding='4px' cellspacing='0'>";
+    echo "<tr>
+             <th>Id</th>   
+             <th>Name</th>   
+             <th>Designation</th>   
+             <th>Salary</th>   
+    </tr>";
+ for ($i=0;$i<count($users);$i++){
     echo "<tr>";
-    foreach ($v1 as $v2){
-        echo "<td> $v2  </td>  ";
-    } echo "</tr>";
-}
- "</table>";
+    for ($u=0;$u<count($users[$i]);$u++){
+        echo "<td>";
+        echo $users[$i][$u] . " ";
+        echo "</td>";
+    }echo "<br>";
+    echo "</tr>";
+ }
+ echo "</table>";
+
+    // echo "<pre>";
+    // print_r($users);
+    // echo "</pre>";

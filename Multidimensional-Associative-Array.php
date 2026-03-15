@@ -1,13 +1,29 @@
 <?php
 
-$employees= [
-    ["name"=>"Mahedi","designation"=>"Software Engineer","age"=>30,"salary"=>30000],
-    ["name"=>"Pollob","designation"=>"Prompt Engineer","age"=>27,"salary"=>50000],
-    ["name"=>"Abdullah","designation"=>"Graphics Designer","age"=>25,"salary"=>40000]
-];
 
-foreach ($employees as $emp){
-    foreach($emp as $key=>$emps){
-        echo "$key => $emps <br>";
-    }
+
+$employee=[
+    ["Id"=>101,"Name"=>"Mahedi","Age"=>30],
+    ["Id"=>102,"Name"=>"Pollob","Age"=>29],
+    ["Id"=>103,"Name"=>"Harun","Age"=>28],
+    ["Id"=>104,"Name"=>"Rashed","Age"=>29]
+];
+echo "<table border='1' cellpadding='4' cellspacing='0'>";
+
+echo "<tr>";
+foreach($employee[0] as $key=> $emp){
+echo "<th>";   
+echo $key ;
+echo "</th>";
 }
+echo "</tr>";
+
+
+foreach($employee as $emp){
+    echo "<tr>";
+    foreach($emp as $value){
+    echo "<td>";    
+    echo  $value . " ";
+    echo "</td>";
+    } echo "</tr>";
+}echo "</table>";
